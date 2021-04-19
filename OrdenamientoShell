@@ -1,0 +1,41 @@
+#include<iostream>
+#include<conio.h>
+
+using namespace std;
+
+int main(){
+  	
+  int vect[100], n, x, salto, temp, band;
+  char dec;
+  
+  do{
+    void func1();
+	cout << "Digite el tamaño de su vector "; cin >> n;
+	
+	for(int i = 0; i < n; i++){
+	  cout << "Digite el valor: "; cin >> vect[i];  	
+	}	
+	for(salto = n / 2; salto > 0; salto = salto / 2)
+	  do{
+	    band = 0;
+		
+		for(int i = 0; i < n - salto; i++)
+		  if(vect[i] > vect[i + salto]){
+		    temp = vect[i];
+			vect[i] = vect[i + salto];
+			vect[i + salto] = temp;
+			band = 1;	
+		  }	
+	  	
+	  }while(band = 0);
+  	
+      for(int i = 0; i < n; i++)
+	  cout << vect[i] << " - ";
+	  cout << endl;
+	  cout << "Desea continuar s/n"; cin >> dec;    	
+  	
+  }while(dec == 's');	
+	
+  getch();	
+  return 0;	
+}
